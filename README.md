@@ -14,17 +14,16 @@ about soliciting feedback and praying that someone else has a better alternative
 The approach taken is to create a mini 2D geometry API and provide two
 implementations.  The webapp implementation is backed with a JavaScript library
 called [Paper.js](http://paperjs.org).  There may be better alternatives but my
-review of available options lead me to believe that this one is the most
-complete and at any rate most familiar looking library.  The server
-implementation is backed with Java2D.
+survey lead me to believe that this one is the most complete (or at least most
+familiar looking) library.  The server implementation is backed with Java2D.
 
 The build is split in three parts
 
-* `shared` - Simple platform-independent geometry API
+* `shared` - Simple platform-independent geometry API.
 * `js` - Webapp implementation of the API backed by Paper.js.  This includes
 a bit of a Paper.js facade and a trivial [`TestApp`](js/src/main/scala/edu/gemini/geom//testapp/TestApp.scala)
-that illustrates how it could be used
-* `jvm` - a server-side implementation using Java 2D for completeness.
+that illustrates how it could be used.
+* `jvm` - A server-side implementation using Java 2D for completeness.
 
 One tremendous problem with this idea is that [`Shape`](shared/src/main/scala/edu/gemini/geom/Shape.scala)
 is parameterized so that operations like shape intersection can be easily made
