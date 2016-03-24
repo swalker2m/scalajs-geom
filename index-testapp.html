@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Gemini GEOM Test App</title>
+  </head>
+  <body>
+    <canvas id="tpe" width="500" height="200"></canvas>
+
+    <!-- Include Scala.js compiled code -->
+    <script type="text/javascript" src="./js/target/scala-2.11/geminigeom-jsdeps.js"></script>
+    <script type="text/javascript" src="./js/target/scala-2.11/geminigeom-fastopt.js"></script>
+    <!-- Run tutorial.webapp.TutorialApp -->
+    <script type="text/javascript">
+      edu.gemini.geom.testapp.TestApp().main(document.getElementById('tpe'));
+    </script>
+
+  </body>
+</html>
